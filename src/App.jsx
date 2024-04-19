@@ -1,5 +1,5 @@
 import "./App.css";
-import { useState } from "react";
+import { useState,useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
 import AddWorkoutForm from "./addWorkout";
 
@@ -41,7 +41,15 @@ function App() {
       duration: "30 minutes",
     },
   ];
-  const [workouts, setWorkouts] = useState(workoutsArray);
+  const [workouts, setWorkouts] = useState(() => {
+    const savedWorkouts = localStorage.getItem("workouts");
+    return savedWorkouts ? JSON.parse(savedWorkouts) : workoutsArray;
+  });
+
+  // Use useEffect to update local storage when workouts change
+  useEffect(() => {
+    localStorage.setItem("workouts", JSON.stringify(workouts));
+  }, [workouts]);
 
   function deleteWorkout(index) {
     const newWorkouts = workouts.filter((item) => item.key !== index);
