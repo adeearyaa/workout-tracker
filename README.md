@@ -1,8 +1,16 @@
-# React + Vite
+# Simple Workout Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a simple Workout Tracker web application built using React.js and styled with Tailwind CSS. It allows users to add, view, and delete workout sessions, helping them keep track of their fitness routines efficiently.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Add Workouts**: Users can input details about their workouts, including type, duration, date, and time.
+- **View Workouts**: Users can view a list of all scheduled workouts.
+- **Delete Workouts**: Users can remove workouts they no longer want to keep track of.
+
+## Technologies Used
+
+- **React.js**: A JavaScript library for building user interfaces.
+- **Tailwind CSS**: A utility-first CSS framework for rapidly building custom designs.
+- **Vite**: A build tool that aims to provide a faster and leaner development experience for modern web projects.
+
